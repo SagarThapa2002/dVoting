@@ -1,30 +1,171 @@
-.div-li {
-  display: inline-grid;
+/* Global styles for body */
+body {
+  font-family: 'Arial', sans-serif; 
+  color: #333;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
 }
+
+/* Main container styles */
+.container-item {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Info container */
+.info {
+  font-size: 1.1em;
+  background-color: #e7f3ff;
+  border-radius: 8px;
+  padding: 12px;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+/* Form input and button styles */
 .input-r {
-  margin: 0.5em;
-  margin-left: 0;
-  padding: 1em;
-  display: block;
-  overflow: scroll;
+  padding: 12px;
+  width: 100%;
+  margin: 8px 0;
+  font-size: 1em;
+  background-color: #e7f3ff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #333;
+  box-sizing: border-box;
 }
+
+/* Label styles */
 .label-r {
-  margin: 0.1em;
-  padding: 0.5em;
-  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #2c3e50;
 }
+
+/* Button styles */
 .btn-add {
-  width: 50%;
-  padding: 1em;
-  float: inline-end;
-  margin: 1em;
+  width: 100%;
+  padding: 15px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
+
+.btn-add:hover {
+  background-color: #2980b9;
+}
+
+/* Note section styles */
 .note {
-  width: 90%;
-  padding: 11px;
-  padding-left: 1px;
-  text-align: justify;
-  max-height: 111px;
-  overflow: auto;
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-left: 5px solid #3498db;
+  color: #555;
+  font-family: 'Georgia', serif;
+  font-size: 0.95em;
+  margin-top: 10px;
   line-height: 1.5em;
+  max-height: 120px;
+  overflow: auto;
+}
+
+/* Small text for total voters and other details */
+small {
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Registration title */
+h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #3498db;
+}
+
+small {
+  color: #7f8c8d;
+  font-size: 1em;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .input-r {
+    font-size: 1em;
+    padding: 12px;
+  }
+
+  .btn-add {
+    font-size: 1.1em;
+    padding: 12px;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-item {
+    padding: 15px;
+  }
+
+  .input-r {
+    padding: 10px;
+  }
+
+  .btn-add {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  .note {
+    font-size: 0.9em;
+  }
+}
+
+/* Table styling for voters list */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #3498db;
+  color: white;
+}
+
+table td {
+  background-color: #f9f9f9;
+}
+
+.container-list.success {
+  margin-top: 20px;
+  background-color: #f1f8ff;
+}
+
+.container-list.attention {
+  background-color: #f8d7da;
+}
+
+/* Small header for voter information */
+.container-item.success {
+  background-color: #d4edda;
+  color: #155724;
+  font-weight: bold;
 }

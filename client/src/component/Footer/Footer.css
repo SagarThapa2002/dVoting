@@ -1,33 +1,52 @@
+/* Universal styles for footer */
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern and clean font family */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .footer,
 .footer-block {
-  padding: 11px;
-  height: 40px;
+  padding: 14px; /* Slightly increased padding for better spacing */
+  height: auto; /* Allow content to flow naturally */
   width: 100%;
   overflow: auto;
 }
+
 .footer {
-  background-color: beige;
+  background-color: #f4f4f4; /* Softer background color for modern feel */
   border-top: 1px solid #e7e7e7;
   text-align: center;
   position: fixed;
   left: 0;
   bottom: 0;
-  overflow: auto;
-}
-.footer-block {
-  display: block;
+  width: 100%;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  font-size: 14px; /* Readable font size */
 }
 
-a.profile {
-  color: #000;
+.footer-block {
+  display: flex;
+  flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer link styles */
+.footer-link {
+  color: #000; /* Set link color to black */
+  text-decoration: none; /* No underline by default */
+  font-weight: 500; /* Slightly bolder for emphasis */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer-link:hover {
+  color: #e74c3c; /* Highlight with a red color */
   text-decoration: underline;
 }
-a.profile:hover {
-  color: tomato;
-  text-decoration: underline;
-}
+
 .footer-container {
-  /* padding: 7px; */
   width: 97%;
   margin-left: auto;
   margin-right: auto;
@@ -35,4 +54,25 @@ a.profile:hover {
   align-items: center;
   justify-content: space-evenly;
   display: flex;
+  flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+  gap: 15px; /* Space between elements */
+}
+
+@media all and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack items vertically on small screens */
+    text-align: center; /* Ensure text is centered on smaller screens */
+    gap: 10px; /* Smaller gap on mobile */
+  }
+
+  .footer {
+    font-size: 13px; /* Adjust font size for smaller screens */
+    padding: 15px; /* Slightly larger padding for mobile */
+  }
+}
+
+@media all and (max-width: 480px) {
+  .footer {
+    font-size: 12px; /* Even smaller font size for very small screens */
+  }
 }

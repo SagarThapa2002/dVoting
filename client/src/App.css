@@ -1,109 +1,168 @@
+/* Global reset and base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Roboto', sans-serif;  /* Elegant, modern font from Google Fonts */
 }
+
+body {
+  background-color: #f4f4f9;  /* Light gray background for readability */
+  color: #333;  /* Dark text color for better contrast */
+}
+
+/* Header styles */
 h1 {
+  font-family: 'Lora', serif;  /* Elegant serif font for headings */
   text-align: center;
+  color: #2C3E50;  /* Dark shade of blue */
+  font-size: 36px;
+  margin: 20px 0;
 }
 
+/* Code block styling */
 code {
-  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
-  background-color: #f1f1f1;
-  padding: 2px;
-  font-size: 105%;
-  border-radius: 6px;
-  border: 1px solid;
+  font-family: 'Courier New', monospace;  /* Monospaced font for code */
+  background-color: #f2f2f2;  /* Light gray background for better contrast */
+  padding: 6px 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
 }
 
+/* Container for main content */
 .container-main {
-  background-color: none;
-  padding: 1%;
-  margin: 11px;
-  margin-left: auto;
-  margin-right: auto;
-  width: max-content;
+  background-color: #fff;
+  padding: 2%;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 1200px;
   overflow: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Container for individual items */
 .container-item {
-  transition: ease all 0.5s;
-  background-color: #f2f2f2;
-  border-radius: 7px;
-  width: 977px;
-  padding: 17px;
-  margin: 17px auto;
+  transition: ease all 0.3s;
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 960px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  display: flex;
-  overflow: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
+.container-item:hover {
+  background-color: #ecf0f1;  /* Light hover effect */
+}
+
+/* Title styling */
 .title {
   text-transform: capitalize;
+  color: #3498db;  /* Blue color for titles */
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
 }
 
+/* List container */
 .container-list {
   width: 100%;
-  padding: 11px;
-  margin: 3px auto;
-  align-items: center;
-  justify-content: center;
+  padding: 20px;
+  margin: 10px auto;
   display: block;
   overflow: auto;
 }
+
+/* Centering items */
 .center-items {
   display: grid;
   place-items: center;
 }
 
+/* Media queries for responsiveness */
 @media all and (max-width: 1020px) {
   .container-item {
-    width: 777px;
-  }
-}
-@media all and (max-width: 900px) {
-  .container-item {
-    width: 800px;
-    display: block;
-  }
-}
-@media all and (max-width: 850px) {
-  .container-item {
-    width: 700px;
-  }
-}
-@media all and (max-width: 750px) {
-  .container-item {
-    width: 600px;
-  }
-}
-@media all and (max-width: 650px) {
-  .container-item {
-    width: 400px;
-  }
-}
-@media all and (max-width: 400px) {
-  .container-item {
-    width: 300px;
+    width: 90%;
   }
 }
 
+@media all and (max-width: 900px) {
+  .container-item {
+    width: 85%;
+  }
+}
+
+@media all and (max-width: 850px) {
+  .container-item {
+    width: 80%;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .container-item {
+    width: 70%;
+  }
+}
+
+@media all and (max-width: 650px) {
+  .container-item {
+    width: 60%;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .container-item {
+    width: 100%;
+  }
+}
+
+/* Info, success, and alert messages */
 .info,
 .attention,
 .alert,
 .success {
-  border: 1px solid black;
-  margin-top: 11px;
-  margin-bottom: 11px px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
 }
+
 .info {
-  background-color: #ddffff;
+  background-color: #e0f7fa;  /* Light cyan for info */
 }
+
 .attention {
-  background-color: #fffbdd;
+  background-color: #fff9c4;  /* Soft yellow for attention */
 }
+
 .success {
-  background-color: #ddffdd;
+  background-color: #a5d6a7;  /* Light green for success */
+  border-color: #66bb6a;  /* Green border */
+}
+
+/* Customizing buttons */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;  /* Darker blue when hovered */
+}
+
+button:active {
+  background-color: #1f5a87;  /* Even darker blue on click */
 }

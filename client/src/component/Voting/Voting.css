@@ -1,43 +1,72 @@
-h2,
-h3 {
-  padding: 11px 1px;
-  margin: auto;
-  text-align: left;
-}
-small {
-  color: grey;
-  font-size: medium;
-}
-p {
-  margin: 1px;
-  padding: 3px;
-}
-.contact {
-  color: grey;
-}
-.slogan {
-  color: #ccab00;
-  font-size: 1.5em;
-  margin: 7px 0px;
-}
-.discription {
-  padding: 11px;
-  padding-left: 1px;
-  text-align: justify;
-  max-height: 111px;
-  overflow: auto;
-  line-height: 1.5em;
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;  /* Modern font for the entire page */
+  background-color: #f4f6f9;  /* Light background color */
+  color: #333;  /* Dark text color for better contrast */
 }
 
+/* Heading Styles */
+h2, h3 {
+  font-family: 'Poppins', sans-serif;  /* Stylish font for headings */
+  color: #2c3e50;  /* Dark gray color for headings */
+  padding: 14px 1px;
+  margin: auto;
+  text-align: left;
+  font-weight: 600;
+}
+
+small {
+  color: #7f8c8d;  /* Lighter gray for small text */
+  font-size: 1rem;
+}
+
+p {
+  margin: 1px;
+  padding: 5px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Contact Section */
+.contact {
+  color: #7f8c8d;
+  font-size: 1rem;
+}
+
+/* Slogan Styling */
+.slogan {
+  color: #f39c12;  /* Golden color for the slogan */
+  font-size: 1.5em;
+  font-weight: 700;  /* Bold for emphasis */
+  margin: 10px 0px;
+}
+
+/* Description Styling */
+.discription {
+  padding: 15px;
+  padding-left: 10px;
+  text-align: justify;
+  max-height: 120px;
+  overflow: hidden;
+  line-height: 1.7em;
+  color: #7f8c8d;
+}
+
+/* Candidate Info Box */
 .candidate-info {
   transition: ease all 0.5s;
   width: 91%;
   float: left;
   margin-left: 1%;
-  padding: 17px;
-  background-color: #e5e5e5;
-  border-radius: 11px;
+  padding: 20px;
+  background-color: #ecf0f1;  /* Light gray background */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  font-size: 1rem;
+  color: #2c3e50;
 }
+
+/* Vote Button Container */
 .vote-btn-container {
   transition: ease all 0.5s;
   height: 100%;
@@ -45,17 +74,68 @@ p {
   float: right;
   align-items: center;
   justify-content: center;
-  padding: 17px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #3498db;  /* Blue background for contrast */
+  border-radius: 10px;
 }
+
 .vote-bth {
   width: 100%;
   height: 55px;
-  font-size: 157%;
+  font-size: 1.5rem;  /* Larger font for visibility */
+  color: white;
+  background-color: #2ecc71;  /* Green color for the vote button */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+.vote-bth:hover {
+  background-color: #27ae60;  /* Darker green on hover */
+  transform: scale(1.05);  /* Slight scale-up effect */
+}
+
+.vote-bth:active {
+  background-color: #1e8449;  /* Even darker green when clicked */
+}
+
+/* Media Queries */
 @media all and (max-width: 900px) {
   .candidate-info,
   .vote-btn-container {
     width: 100%;
-    height: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .vote-btn-container {
+    margin-top: 20px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  h2, h3 {
+    font-size: 1.2rem;
+  }
+
+  .slogan {
+    font-size: 1.3em;
+  }
+
+  .vote-bth {
+    font-size: 1.3rem;
+  }
+
+  .candidate-info {
+    padding: 15px;
+  }
+
+  .discription {
+    font-size: 0.9rem;
+    max-height: 100px;
   }
 }

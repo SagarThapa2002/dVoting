@@ -1,7 +1,42 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Button Styles */
 .btn-verification {
-  padding: 11px;
+  padding: 12px 20px;
   width: 100%;
-  margin-top: 11px;
-  margin-bottom: 11px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   float: inline-end;
+  font-size: 1.1em;
+  text-align: center;
+  background-color: #007BFF; /* Blue color */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-verification:hover {
+  background-color: #0056b3; /* Darker blue for hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.btn-verification:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue glow when focused */
+}
+
+/* Responsive Button */
+@media (max-width: 768px) {
+  .btn-verification {
+    padding: 10px 15px;
+    font-size: 1em;
+  }
 }

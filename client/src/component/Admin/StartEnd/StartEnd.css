@@ -1,9 +1,51 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', 'Segoe UI', sans-serif;
+}
+
+/* Start Button Styles */
 .start-btn {
   display: block;
-  padding: 21px;
-  margin: 7px;
+  padding: 16px 30px; /* Adjusted padding for better visual balance */
+  margin: 10px auto;
   min-width: max-content;
   text-align: center;
-  width: 333px;
+  width: 100%;
+  max-width: 350px; /* Max width for better responsiveness */
   align-self: center;
+  background-color: #28a745; /* Green color for action */
+  color: white;
+  font-size: 1.2em;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover and Active Effects */
+.start-btn:hover {
+  background-color: #218838; /* Darker green for hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.start-btn:active {
+  background-color: #1e7e34; /* Even darker green for active state */
+}
+
+/* Focus Effect */
+.start-btn:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.7); /* Green glow when focused */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .start-btn {
+    width: 80%; /* Adjust width for smaller screens */
+    padding: 12px 20px; /* Reduced padding for mobile */
+    font-size: 1em; /* Slightly smaller font size for mobile */
+  }
 }

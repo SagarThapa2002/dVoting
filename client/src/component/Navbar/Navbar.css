@@ -1,62 +1,79 @@
 * {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font for better readability */
+  margin: 0;
+  padding: 0;
 }
+
 li {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
   color: white;
 }
+
 nav {
   display: flex;
   height: 11vh;
-  background: tomato;
-  justify-content: space-around;
+  background-color: #e74c3c; /* A more refined red shade */
+  justify-content: space-between;
   position: sticky;
   top: 0;
   align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for subtle depth */
 }
+
 nav .header {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 26px; /* Slightly larger size for header */
+  font-weight: 600; /* A bit bolder for emphasis */
   text-transform: uppercase;
+  color: white; /* White text color for contrast */
 }
+
 nav .header:hover {
   cursor: pointer;
+  color: #f39c12; /* Change color to gold on hover */
 }
+
 nav .navbar-links {
   display: flex;
   justify-content: space-around;
   width: 70%;
   cursor: pointer;
 }
+
 nav .navbar-links a {
-  font-size: 17px;
+  font-size: 18px; /* Slightly larger text for better visibility */
   font-weight: normal;
-  cursor: pointer;
+  color: white;
   text-transform: capitalize;
+  transition: color 0.3s ease; /* Smooth color transition */
 }
+
 nav .navbar-links a:hover {
   cursor: pointer;
-  color: black;
+  color: #f39c12; /* Change to gold color on hover */
 }
+
 nav .burger-menu {
-  font-size: 24px;
+  font-size: 28px; /* Increase the size for better visibility on smaller screens */
   color: white;
   cursor: pointer;
   display: none;
 }
+
 .nav-active {
-  color: black;
+  color: #f39c12; /* Highlight active link with gold */
 }
 
 @media all and (max-width: 777px) {
   nav .burger-menu {
     display: block;
   }
+
   nav .navbar-links {
-    background-color: tomato;
+    background-color: #e74c3c; /* Matching the background color for consistency */
     display: block;
     width: 50%;
     position: absolute;
@@ -65,8 +82,9 @@ nav .burger-menu {
     padding: 0px;
     transform: translate(-700px);
   }
+
   nav .navbar-links li {
-    padding: 25px;
+    padding: 20px;
     border-top: 3px solid white;
   }
 }
